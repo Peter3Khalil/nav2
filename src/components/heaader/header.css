@@ -1,0 +1,101 @@
+header {
+    box-shadow: 0px -6px 7px black;
+    background-color: white;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+ul li a {
+    font-size: .825rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.5rem;
+}
+
+a {
+    color: black;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-toggle,
+.nav-close,
+.nav-icon {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        top: initial;
+        bottom: 0;
+        box-shadow: 0px 5px 7px black;
+    }
+
+    nav {
+        height: 4rem;
+        width: 80%;
+    }
+
+    .nav-menu {
+        padding: 2rem;
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        box-shadow: 0px 5px 7px black;
+        border-radius: 1rem 1rem 0 0;
+        -webkit-border-radius: 1rem 1rem 0 0;
+        -moz-border-radius: 1rem 1rem 0 0;
+        -ms-border-radius: 1rem 1rem 0 0;
+        -o-border-radius: 1rem 1rem 0 0;
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+    }
+
+    .show-menu {
+        bottom: 0;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0rem;
+    }
+
+    .nav-close {
+        position: absolute;
+        right: 10%;
+        bottom: 1.5rem;
+    }
+
+    .nav-toggle,
+    .nav-close,
+    .nav-icon {
+        display: block;
+    }
+
+}
